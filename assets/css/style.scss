@@ -1,0 +1,378 @@
+/*
+ * Author: Esteban Contreras
+ * URL: esteb.co
+ *
+ * Project Name: pedalr
+ * URL: http://pedalr.com
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Neuton:400,700);
+
+$pedalr-blue: rgb( 53, 152, 219 );
+$pedalr-gray: rgb( 35, 38, 41 );
+$pedalr-background-gray: rgb( 241, 241, 241 );
+$input-height: 60px;
+
+/*	################################################################
+	1. GENERAL STRUCTURES
+################################################################# */
+
+/* Import fonts */
+@font-face {
+	font-family: 'gothamBook';
+	src: url(gotham-book.woff);
+}
+@font-face {
+	font-family: 'gothamLight';
+	src: url(gotham-light.woff);
+}
+@font-face {
+	font-family: 'gothamMedium';
+	src: url(gotham-medium.woff);
+}
+
+@mixin background-properties($image-url, $min-height) {
+	background: url($image-url) no-repeat center top;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: $min-height;
+	width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+* { 
+	margin: 0;
+	padding: 0px;
+  font-family: 'gothamBook', sans-serif;
+}
+
+a { 
+	text-decoration: none;
+	color: white;
+	transition: 0.5s ease;
+	&:hover{
+		text-decoration: none;
+		color: black;
+	}
+}
+
+h2{
+  color: $pedalr-gray;
+  font-size: 36px;
+  font-family: gothamMedium;
+}
+
+.button-blue{
+	font-size: 18px;
+	font-weight: bold;
+	width: 170px;
+	height: $input-height;
+	background: $pedalr-blue;
+	color: white;
+}
+
+/*	################################################################
+	2. HEADER
+################################################################# */
+
+header {
+	padding-top: 30px;
+	@include background-properties("../img/background-header.jpg", 820px);
+
+	h1 {
+	  font-family: 'gothamLight';
+		color: white;
+		font-size: 60px;
+		line-height: 1.2;
+		margin-top: 110px;
+		margin-bottom: 40px;
+	}
+	p{
+		color: white;
+		font-size: 16px;
+	  opacity: 0.8;
+		margin-top: 75px;
+    margin-bottom: 20px;
+	}
+	div.input-group{
+		display: inline-block;
+		input[type=text] {
+			font-size: 18px;
+			font-weight: bold;
+		  -webkit-transition: background-color 0.2s;
+		  transition: background-color 0.2s;
+		  width: 300px !important;
+		  height: $input-height;
+		  color: rgb(77,82,87);
+		}
+	}
+}
+
+/*	################################################################
+	3. WHAT IS PEDALR
+################################################################# */
+
+section#what-is-pedalr{
+	padding-top: 100px;
+	padding-bottom: 120px;
+	@include background-properties("../img/background-what-is-pedalr.jpg", 480px);	
+	p{
+  	color: $pedalr-gray;
+	  line-height: 1.875;
+ 		font-size: 16px;
+	}
+}
+
+/*	################################################################
+	4. WHAT YOU WILLL FIND IN PEDALR
+################################################################# */
+
+section#what-you-will-find {
+	padding-top: 115px;
+	padding-bottom: 120px;
+	.element-title{
+	  font-size: 24px;
+	  font-family: Neuton;
+	  color: $pedalr-blue;
+    font-weight: bold;
+  	line-height: 1.5;
+	}
+	.img-container{
+    position: relative;
+    margin-top: 20px;
+	}
+	.img-container-first{	@include background-properties("../img/item-first.jpg", 370px); }
+	.img-container-second{ @include background-properties("../img/item-second.jpg", 370px); }
+	.img-container-third{	@include background-properties("../img/item-third.jpg", 370px); }
+	.category-tag{
+		width: 100%;
+		height: 50px;
+	  background-color: rgba( 77, 82, 87, 0.502 );
+    position: absolute;
+    bottom: 0;
+		span{
+	  	color: white;
+	  	position: absolute;
+	  	margin-top: 15px;
+	  	margin-left: 30px;
+  	}
+	}
+	#span-signup-up{
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 20px;
+	  font-size: 18px;
+    color: $pedalr-gray;
+	}
+}
+
+/*	################################################################
+	5. WHAT YOU WILL FIND IN PEDALR
+################################################################# */
+
+section#why-pedalr{
+	background-color: $pedalr-background-gray;
+	padding-top: 93px;
+	padding-bottom: 120px;
+	h2{ margin-bottom: 50px; }
+	.col-md-4{ padding: 0; }
+	.text-block{
+		width: 390px;
+		height: 440px;
+		padding: 50px;
+		background-color: white;
+		span{
+		  font-size: 36px;
+	    color: $pedalr-gray;
+		}
+		p{
+		  font-size: 16px;
+			color: $pedalr-gray;
+			line-height: 1.875;
+		}
+	}
+	.text-block-quality{ height: 385px;}
+	.image-block{
+		position: absolute;
+    z-index: 1;
+	}
+	.image-block-first{
+		@include background-properties("../img/why-pedalr-quality.jpg", 440px);
+	}
+	.image-block-second{ 
+		@include background-properties("../img/why-pedalr-focus.jpg", 440px);
+		top: -55px; 
+	}
+	.image-block-third{
+	  top: -55px;
+		@include background-properties("../img/why-pedalr-trust.jpg", 440px);
+	}
+}
+
+/*	################################################################
+	6. BEST URBAN CYCLING YEAR
+################################################################# */
+
+section#best-urban-cycling{
+	padding-top: 195px;
+	padding-bottom: 195px;
+	@include background-properties("../img/background-best-urban.jpg", 480px);	
+  .span-container{
+		width: 370px;
+		height: 90px;
+	  border: 2px white solid;
+	  border-radius: 2px;
+	  margin: auto;
+    padding: 23px;
+		span{
+	  	color: white;
+		  font-family: Neuton;
+	 		font-size: 24px;
+		}
+	}
+}
+
+/*	################################################################
+	7. WHAT DO PEOPLE HAVE TO SAY
+################################################################# */
+
+section#what-do-people-have{
+	padding-top: 100px;
+	padding-bottom: 120px;
+	background-color: $pedalr-background-gray;
+	.testimonials {
+		margin-top: 70px;
+		.carousel-indicators{ 
+   	  margin: 80px auto 0;
+	    bottom: 0;
+	    position: relative;
+	    left: 0;
+			li{
+				background-color: rgb( 214, 222, 228 );
+				border: 0;
+			}
+			.active{
+				background-color: $pedalr-blue;
+			}
+		}
+		img {
+			width: 170px;
+			margin-left: auto;
+    	margin-right: auto;
+    }
+		p {
+			margin-top: 40px;
+			font-size: 16px;
+			color: $pedalr-gray;
+		  line-height: 1.875;
+		}
+		span{
+		  font-size: 14px;
+			color: $pedalr-gray;
+		  line-height: 5.143;
+		  font-weight: bold;
+		}
+	}
+}
+
+
+/*	################################################################
+	8. ELSEWHERE
+################################################################# */
+
+section#elsewhere {
+	padding-top: 100px;
+	padding-bottom: 120px;
+	.container{ 
+		padding: 0;
+	}
+	#social-container{
+		height: 385px;
+		color: white;
+		.social-block{
+			transition: 0.5s ease;
+			&:hover{ opacity: 0.8; }
+		}
+		.social-name{
+			position: absolute;
+      display: inline;
+	    top: 40px;
+    	left: 50px;
+			font-size: 36px;
+			span{
+				font-size: 24px;
+		    vertical-align: middle;
+			}
+		}
+		.fa{
+			top: 47px;
+			left: 47px;
+			margin-right: 25px;
+	    vertical-align: middle;
+		}
+		.fa-angle-right{
+			margin-left: 80px;
+	    vertical-align: middle;
+		}
+		#instagram{
+			position: relative;
+			width: 388px;
+			display: inline-block;
+			height: inherit;
+			background-color: rgb( 81, 127, 164 );
+		}
+		#middle-container{
+			width: 498px;
+			display: inline-block;
+			height: inherit;
+			#twitter{
+				position: relative;
+				height: 240px;
+				background-color: rgb( 0, 172, 237 );
+			}
+			#facebook{
+				position: relative;
+				height: 145px;
+				background-color: rgb( 59, 89, 152 );
+			}
+		}
+		#blog{
+			position: relative;
+			width: 284px;
+			height: inherit;
+	    display: inline-block;
+			background-color: rgb( 77, 82, 87 );
+		}
+	}
+}
+
+/*	################################################################
+ 9. PRE-FOOTER
+################################################################# */
+
+section#pre-footer{
+	padding-top: 200px;
+	@include background-properties("../img/background-pre-footer.jpg", 480px);
+}
+
+/*	################################################################
+ 10. FOOTER
+################################################################# */
+
+footer{
+	background-color: rgb( 27, 29, 31 );
+	height: 100px;
+  padding-top: 25px;
+	li{
+		color: white;
+    display: inline;
+    font-size: 16px;
+	  line-height: 3;
+	  opacity: 0.702;
+	  margin-right: 27px;
+		a:hover{ color: $pedalr-blue; }
+	}
+}

@@ -1,0 +1,380 @@
+/*
+ * Author: Esteban Contreras
+ * URL: esteb.co
+ *
+ * Project Name: pedalr
+ * URL: http://pedalr.com
+ */
+@import url(http://fonts.googleapis.com/css?family=Neuton:400,700);
+/*	################################################################
+	1. GENERAL STRUCTURES
+################################################################# */
+/* Import fonts */
+@font-face {
+  font-family: 'gothamBook';
+  src: url(gotham-book.woff); }
+@font-face {
+  font-family: 'gothamLight';
+  src: url(gotham-light.woff); }
+@font-face {
+  font-family: 'gothamMedium';
+  src: url(gotham-medium.woff); }
+* {
+  margin: 0;
+  padding: 0px;
+  font-family: 'gothamBook', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease; }
+  a:hover {
+    text-decoration: none;
+    color: black; }
+
+h2 {
+  color: #232629;
+  font-size: 36px;
+  font-family: gothamMedium; }
+
+.button-blue {
+  font-size: 18px;
+  font-weight: bold;
+  width: 170px;
+  height: 60px;
+  background: #3598db;
+  color: white; }
+
+/*	################################################################
+	2. HEADER
+################################################################# */
+header {
+  padding-top: 30px;
+  background: url("../img/background-header.jpg") no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 820px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  header h1 {
+    font-family: 'gothamLight';
+    color: white;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-top: 110px;
+    margin-bottom: 40px; }
+  header p {
+    color: white;
+    font-size: 16px;
+    opacity: 0.8;
+    margin-top: 75px;
+    margin-bottom: 20px; }
+  header div.input-group {
+    display: inline-block; }
+    header div.input-group input[type=text] {
+      font-size: 18px;
+      font-weight: bold;
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+      width: 300px !important;
+      height: 60px;
+      color: #4d5257; }
+
+/*	################################################################
+	3. WHAT IS PEDALR
+################################################################# */
+section#what-is-pedalr {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background: url("../img/background-what-is-pedalr.jpg") no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 480px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  section#what-is-pedalr p {
+    color: #232629;
+    line-height: 1.875;
+    font-size: 16px; }
+
+/*	################################################################
+	4. WHAT YOU WILLL FIND IN PEDALR
+################################################################# */
+section#what-you-will-find {
+  padding-top: 115px;
+  padding-bottom: 120px; }
+  section#what-you-will-find .element-title {
+    font-size: 24px;
+    font-family: Neuton;
+    color: #3598db;
+    font-weight: bold;
+    line-height: 1.5; }
+  section#what-you-will-find .img-container {
+    position: relative;
+    margin-top: 20px; }
+  section#what-you-will-find .img-container-first {
+    background: url("../img/item-first.jpg") no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 370px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  section#what-you-will-find .img-container-second {
+    background: url("../img/item-second.jpg") no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 370px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  section#what-you-will-find .img-container-third {
+    background: url("../img/item-third.jpg") no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 370px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  section#what-you-will-find .category-tag {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(77, 82, 87, 0.502);
+    position: absolute;
+    bottom: 0; }
+    section#what-you-will-find .category-tag span {
+      color: white;
+      position: absolute;
+      margin-top: 15px;
+      margin-left: 30px; }
+  section#what-you-will-find #span-signup-up {
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #232629; }
+
+/*	################################################################
+	5. WHAT YOU WILL FIND IN PEDALR
+################################################################# */
+section#why-pedalr {
+  background-color: #f1f1f1;
+  padding-top: 93px;
+  padding-bottom: 120px; }
+  section#why-pedalr h2 {
+    margin-bottom: 50px; }
+  section#why-pedalr .col-md-4 {
+    padding: 0; }
+  section#why-pedalr .text-block {
+    width: 390px;
+    height: 440px;
+    padding: 50px;
+    background-color: white; }
+    section#why-pedalr .text-block span {
+      font-size: 36px;
+      color: #232629; }
+    section#why-pedalr .text-block p {
+      font-size: 16px;
+      color: #232629;
+      line-height: 1.875; }
+  section#why-pedalr .text-block-quality {
+    height: 385px; }
+  section#why-pedalr .image-block {
+    position: absolute;
+    z-index: 1; }
+  section#why-pedalr .image-block-first {
+    background: url("../img/why-pedalr-quality.jpg") no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 440px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  section#why-pedalr .image-block-second {
+    background: url("../img/why-pedalr-focus.jpg") no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 440px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    top: -55px; }
+  section#why-pedalr .image-block-third {
+    top: -55px;
+    background: url("../img/why-pedalr-trust.jpg") no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 440px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+/*	################################################################
+	6. BEST URBAN CYCLING YEAR
+################################################################# */
+section#best-urban-cycling {
+  padding-top: 195px;
+  padding-bottom: 195px;
+  background: url("../img/background-best-urban.jpg") no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 480px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  section#best-urban-cycling .span-container {
+    width: 370px;
+    height: 90px;
+    border: 2px white solid;
+    border-radius: 2px;
+    margin: auto;
+    padding: 23px; }
+    section#best-urban-cycling .span-container span {
+      color: white;
+      font-family: Neuton;
+      font-size: 24px; }
+
+/*	################################################################
+	7. WHAT DO PEOPLE HAVE TO SAY
+################################################################# */
+section#what-do-people-have {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background-color: #f1f1f1; }
+  section#what-do-people-have .testimonials {
+    margin-top: 70px; }
+    section#what-do-people-have .testimonials .carousel-indicators {
+      margin: 80px auto 0;
+      bottom: 0;
+      position: relative;
+      left: 0; }
+      section#what-do-people-have .testimonials .carousel-indicators li {
+        background-color: #d6dee4;
+        border: 0; }
+      section#what-do-people-have .testimonials .carousel-indicators .active {
+        background-color: #3598db; }
+    section#what-do-people-have .testimonials img {
+      width: 170px;
+      margin-left: auto;
+      margin-right: auto; }
+    section#what-do-people-have .testimonials p {
+      margin-top: 40px;
+      font-size: 16px;
+      color: #232629;
+      line-height: 1.875; }
+    section#what-do-people-have .testimonials span {
+      font-size: 14px;
+      color: #232629;
+      line-height: 5.143;
+      font-weight: bold; }
+
+/*	################################################################
+	8. ELSEWHERE
+################################################################# */
+section#elsewhere {
+  padding-top: 100px;
+  padding-bottom: 120px; }
+  section#elsewhere .container {
+    padding: 0; }
+  section#elsewhere #social-container {
+    height: 385px;
+    color: white; }
+    section#elsewhere #social-container .social-block {
+      transition: 0.5s ease; }
+      section#elsewhere #social-container .social-block:hover {
+        opacity: 0.8; }
+    section#elsewhere #social-container .social-name {
+      position: absolute;
+      display: inline;
+      top: 40px;
+      left: 50px;
+      font-size: 36px; }
+      section#elsewhere #social-container .social-name span {
+        font-size: 24px;
+        vertical-align: middle; }
+    section#elsewhere #social-container .fa {
+      top: 47px;
+      left: 47px;
+      margin-right: 25px;
+      vertical-align: middle; }
+    section#elsewhere #social-container .fa-angle-right {
+      margin-left: 80px;
+      vertical-align: middle; }
+    section#elsewhere #social-container #instagram {
+      position: relative;
+      width: 388px;
+      display: inline-block;
+      height: inherit;
+      background-color: #517fa4; }
+    section#elsewhere #social-container #middle-container {
+      width: 498px;
+      display: inline-block;
+      height: inherit; }
+      section#elsewhere #social-container #middle-container #twitter {
+        position: relative;
+        height: 240px;
+        background-color: #00aced; }
+      section#elsewhere #social-container #middle-container #facebook {
+        position: relative;
+        height: 145px;
+        background-color: #3b5998; }
+    section#elsewhere #social-container #blog {
+      position: relative;
+      width: 284px;
+      height: inherit;
+      display: inline-block;
+      background-color: #4d5257; }
+
+/*	################################################################
+ 9. PRE-FOOTER
+################################################################# */
+section#pre-footer {
+  padding-top: 200px;
+  background: url("../img/background-pre-footer.jpg") no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 480px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+/*	################################################################
+ 10. FOOTER
+################################################################# */
+footer {
+  background-color: #1b1d1f;
+  height: 100px;
+  padding-top: 25px; }
+  footer li {
+    color: white;
+    display: inline;
+    font-size: 16px;
+    line-height: 3;
+    opacity: 0.702;
+    margin-right: 27px; }
+    footer li a:hover {
+      color: #3598db; }
+
+/*# sourceMappingURL=style.css.map */
