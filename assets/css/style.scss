@@ -82,6 +82,19 @@ header {
 	padding-top: 30px;
 	@include background-properties("../img/background-header.jpg", 820px);
 
+	.button-login{
+	  border-radius: 5px;
+	  background-color: rgb( 77, 82, 87 );
+	  color: white;
+    width: 170px;
+	  height: 48px;
+    font-size: 16px;
+    float: right;
+    &:hover{
+    	opacity: 0.8;
+    	color: white;
+    }
+	}
 	h1 {
 	  font-family: 'gothamLight';
 		color: white;
