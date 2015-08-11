@@ -35,7 +35,11 @@ a {
 h2 {
   color: #232629;
   font-size: 36px;
-  font-family: gothamMedium; }
+  font-family: gothamMedium;
+  margin-bottom: 50px; }
+
+p {
+  font-size: 16px; }
 
 .button-blue {
   font-size: 18px;
@@ -90,7 +94,7 @@ header {
       font-weight: bold;
       -webkit-transition: background-color 0.2s;
       transition: background-color 0.2s;
-      width: 300px !important;
+      width: 300px;
       height: 60px;
       color: #4d5257; }
 
@@ -98,8 +102,6 @@ header {
 	3. WHAT IS PEDALR
 ################################################################# */
 section#what-is-pedalr {
-  padding-top: 100px;
-  padding-bottom: 120px;
   background: url("../img/background-what-is-pedalr.jpg") no-repeat center top;
   background-attachment: relative;
   background-position: center center;
@@ -117,75 +119,68 @@ section#what-is-pedalr {
 /*	################################################################
 	4. WHAT YOU WILLL FIND IN PEDALR
 ################################################################# */
-section#what-you-will-find {
-  padding-top: 115px;
-  padding-bottom: 120px; }
-  section#what-you-will-find .element-title {
-    font-size: 24px;
-    font-family: Neuton;
-    color: #3598db;
-    font-weight: bold;
-    line-height: 1.5; }
-  section#what-you-will-find .img-container {
-    position: relative;
-    margin-top: 20px; }
-  section#what-you-will-find .img-container-first {
-    background: url("../img/item-first.jpg") no-repeat center top;
-    background-attachment: relative;
-    background-position: center center;
-    min-height: 370px;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-  section#what-you-will-find .img-container-second {
-    background: url("../img/item-second.jpg") no-repeat center top;
-    background-attachment: relative;
-    background-position: center center;
-    min-height: 370px;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-  section#what-you-will-find .img-container-third {
-    background: url("../img/item-third.jpg") no-repeat center top;
-    background-attachment: relative;
-    background-position: center center;
-    min-height: 370px;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-  section#what-you-will-find .category-tag {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(77, 82, 87, 0.502);
+section#what-you-will-find .element-title {
+  font-size: 24px;
+  font-family: Neuton;
+  color: #3598db;
+  font-weight: bold;
+  line-height: 1.5; }
+section#what-you-will-find .img-container {
+  position: relative;
+  margin-top: 20px; }
+section#what-you-will-find .img-container-first {
+  background: url("../img/item-first.jpg") no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 370px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+section#what-you-will-find .img-container-second {
+  background: url("../img/item-second.jpg") no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 370px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+section#what-you-will-find .img-container-third {
+  background: url("../img/item-third.jpg") no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 370px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+section#what-you-will-find .category-tag {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(77, 82, 87, 0.502);
+  position: absolute;
+  bottom: 0; }
+  section#what-you-will-find .category-tag span {
+    color: white;
     position: absolute;
-    bottom: 0; }
-    section#what-you-will-find .category-tag span {
-      color: white;
-      position: absolute;
-      margin-top: 15px;
-      margin-left: 30px; }
-  section#what-you-will-find #span-signup-up {
-    display: inline-block;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #232629; }
+    margin-top: 15px;
+    margin-left: 30px; }
+section#what-you-will-find #span-signup-up {
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #232629; }
 
 /*	################################################################
 	5. WHAT YOU WILL FIND IN PEDALR
 ################################################################# */
 section#why-pedalr {
-  background-color: #f1f1f1;
-  padding-top: 93px;
-  padding-bottom: 120px; }
-  section#why-pedalr h2 {
-    margin-bottom: 50px; }
+  background-color: #f1f1f1; }
   section#why-pedalr .col-md-4 {
     padding: 0; }
   section#why-pedalr .text-block {
@@ -269,11 +264,9 @@ section#best-urban-cycling {
 	7. WHAT DO PEOPLE HAVE TO SAY
 ################################################################# */
 section#what-do-people-have {
-  padding-top: 100px;
-  padding-bottom: 120px;
   background-color: #f1f1f1; }
   section#what-do-people-have .testimonials {
-    margin-top: 70px; }
+    margin-top: 20px; }
     section#what-do-people-have .testimonials .carousel-indicators {
       margin: 80px auto 0;
       bottom: 0;
@@ -302,59 +295,54 @@ section#what-do-people-have {
 /*	################################################################
 	8. ELSEWHERE
 ################################################################# */
-section#elsewhere {
-  padding-top: 100px;
-  padding-bottom: 120px; }
-  section#elsewhere .container {
-    padding: 0; }
-  section#elsewhere #social-container {
-    height: 385px;
-    color: white; }
-    section#elsewhere #social-container .social-block {
-      transition: 0.5s ease; }
-      section#elsewhere #social-container .social-block:hover {
-        opacity: 0.8; }
-    section#elsewhere #social-container .social-name {
+section#elsewhere #social-container {
+  font-size: 0;
+  height: 385px;
+  color: white; }
+  section#elsewhere #social-container .social-block {
+    transition: 0.5s ease;
+    padding-top: 50px; }
+    section#elsewhere #social-container .social-block:hover {
+      opacity: 0.8; }
+    section#elsewhere #social-container .social-block .social-name {
       position: absolute;
-      display: inline;
-      top: 40px;
-      left: 50px;
+      width: 100%;
       font-size: 36px; }
-      section#elsewhere #social-container .social-name span {
+      section#elsewhere #social-container .social-block .social-name span {
         font-size: 24px;
-        vertical-align: middle; }
-    section#elsewhere #social-container .fa {
-      top: 47px;
-      left: 47px;
-      margin-right: 25px;
-      vertical-align: middle; }
-    section#elsewhere #social-container .fa-angle-right {
-      margin-left: 80px;
-      vertical-align: middle; }
-    section#elsewhere #social-container #instagram {
+        vertical-align: top; }
+  section#elsewhere #social-container .fa-icon {
+    margin-left: 50px;
+    vertical-align: top; }
+  section#elsewhere #social-container .fa-angle-right {
+    float: right;
+    margin-right: 50px; }
+  section#elsewhere #social-container #instagram {
+    position: relative;
+    width: 388px;
+    display: inline-block;
+    height: inherit;
+    background-color: #517fa4; }
+  section#elsewhere #social-container #middle-container {
+    width: 498px;
+    display: inline-block;
+    height: inherit; }
+    section#elsewhere #social-container #middle-container #twitter {
       position: relative;
-      width: 388px;
-      display: inline-block;
-      height: inherit;
-      background-color: #517fa4; }
-    section#elsewhere #social-container #middle-container {
-      width: 498px;
-      display: inline-block;
-      height: inherit; }
-      section#elsewhere #social-container #middle-container #twitter {
-        position: relative;
-        height: 240px;
-        background-color: #00aced; }
-      section#elsewhere #social-container #middle-container #facebook {
-        position: relative;
-        height: 145px;
-        background-color: #3b5998; }
-    section#elsewhere #social-container #blog {
+      height: 240px;
+      background-color: #00aced; }
+    section#elsewhere #social-container #middle-container #facebook {
       position: relative;
-      width: 284px;
-      height: inherit;
-      display: inline-block;
-      background-color: #4d5257; }
+      height: 145px;
+      background-color: #3b5998; }
+  section#elsewhere #social-container #blog {
+    position: relative;
+    width: 284px;
+    height: inherit;
+    display: inline-block;
+    background-color: #4d5257; }
+    section#elsewhere #social-container #blog span {
+      margin-left: 50px; }
 
 /*	################################################################
  9. PRE-FOOTER
@@ -387,5 +375,137 @@ footer {
     margin-right: 27px; }
     footer li a:hover {
       color: #3598db; }
+
+/*	################################################################
+ 11. MEDIA QUERIES
+################################################################# */
+@media (max-width: 768px) {
+  .standard-padding {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+
+  h2 {
+    font-size: 19px;
+    margin-bottom: 30px; }
+
+  p {
+    font-size: 14px !important; }
+
+  header {
+    min-height: initial;
+    padding-bottom: 90px; }
+    header img {
+      width: 100px; }
+    header .button-login {
+      width: 115px;
+      height: 45px;
+      font-size: 14px; }
+    header h1 {
+      font-size: 35px;
+      margin-top: 90px; }
+    header p {
+      font-size: 11px;
+      margin-top: 60px; }
+    header input {
+      width: 200px !important;
+      height: 45px !important;
+      font-size: 12px !important; }
+    header .button-blue {
+      font-size: 12px;
+      width: 85px;
+      height: 45px; }
+
+  section#what-is-pedalr {
+    min-height: auto; }
+
+  section#what-you-will-find .element-title {
+    font-size: 18px; }
+  section#what-you-will-find .img-container {
+    margin-bottom: 30px;
+    min-height: 250px; }
+  section#what-you-will-find #span-signup-up {
+    font-size: 16px;
+    margin-top: 0; }
+  section#what-you-will-find .button-blue {
+    width: 115px;
+    height: 45px;
+    font-size: 14px; }
+
+  section#why-pedalr .text-block {
+    height: auto;
+    width: 100%;
+    padding: 30px; }
+  section#why-pedalr .image-block-container {
+    min-height: 200px; }
+    section#why-pedalr .image-block-container .image-block {
+      min-height: inherit; }
+    section#why-pedalr .image-block-container .image-block-second,
+    section#why-pedalr .image-block-container .image-block-third {
+      top: 0; }
+
+  section#what-do-people-have .testimonials img {
+    width: 130px; }
+  section#what-do-people-have .carousel-indicators {
+    margin: 0 auto 0 !important; }
+
+  section#best-urban-cycling {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 0; }
+    section#best-urban-cycling .span-container {
+      width: 259px;
+      height: 63px;
+      padding: 13px; }
+      section#best-urban-cycling .span-container span {
+        font-size: 20px; }
+
+  section#elsewhere {
+    padding-bottom: 0; }
+    section#elsewhere .container {
+      padding: 0; }
+    section#elsewhere h2 {
+      margin-left: 15px; }
+    section#elsewhere #social-container {
+      height: initial; }
+      section#elsewhere #social-container .social-block {
+        width: 100% !important;
+        height: 100px !important;
+        padding-top: 34px; }
+        section#elsewhere #social-container .social-block .social-name {
+          font-size: 26px; }
+          section#elsewhere #social-container .social-block .social-name span {
+            font-size: 18px; }
+      section#elsewhere #social-container #middle-container {
+        width: 100%; }
+
+  section#pre-footer {
+    min-height: 250px;
+    padding-top: 90px; }
+
+  footer {
+    height: 80px; }
+    footer li {
+      font-size: 8px; } }
+@media (min-width: 769px) and (max-width: 991px) {
+  .standard-padding {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+
+  section#elsewhere #social-container {
+    height: initial; }
+    section#elsewhere #social-container #instagram {
+      width: 100%; }
+    section#elsewhere #social-container #middle-container {
+      width: 100%; }
+    section#elsewhere #social-container #blog {
+      width: 100%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .standard-padding {
+    padding-top: 100px;
+    padding-bottom: 120px; } }
+@media (min-width: 1200px) {
+  .standard-padding {
+    padding-top: 100px;
+    padding-bottom: 120px; } }
 
 /*# sourceMappingURL=style.css.map */
