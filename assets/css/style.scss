@@ -423,9 +423,7 @@ footer{
 	    height: 45px;
 		}
 	}
-	section#what-is-pedalr{
-		min-height: auto;
-	}
+	section#what-is-pedalr{ min-height: auto; }
 	section#what-you-will-find{	
 		.element-title{ font-size: 18px; }
 		.img-container{
@@ -450,11 +448,8 @@ footer{
 		}
 		.image-block-container{
 			min-height: 200px;
-			.image-block{
-		    min-height: inherit;
-			}
-			.image-block-second,
-			.image-block-third{ top: 0; }
+			.image-block{ min-height: inherit; }
+			.image-block-second, .image-block-third{ top: 0; }
 		}
 	}
 	section#what-do-people-have{

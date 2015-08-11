@@ -439,8 +439,7 @@ footer {
     min-height: 200px; }
     section#why-pedalr .image-block-container .image-block {
       min-height: inherit; }
-    section#why-pedalr .image-block-container .image-block-second,
-    section#why-pedalr .image-block-container .image-block-third {
+    section#why-pedalr .image-block-container .image-block-second, section#why-pedalr .image-block-container .image-block-third {
       top: 0; }
 
   section#what-do-people-have .testimonials img {
