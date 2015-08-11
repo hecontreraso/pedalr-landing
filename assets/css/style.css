@@ -89,7 +89,7 @@ header {
     margin-bottom: 20px; }
   header div.input-group {
     display: inline-block; }
-    header div.input-group input[type=text] {
+    header div.input-group input[type=email] {
       font-size: 18px;
       font-weight: bold;
       -webkit-transition: background-color 0.2s;
