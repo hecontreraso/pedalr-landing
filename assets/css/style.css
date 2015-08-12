@@ -24,6 +24,15 @@
   padding: 0px;
   font-family: 'gothamBook', sans-serif; }
 
+#browserWarning {
+  display: none;
+  background-color: white; }
+  #browserWarning h2 {
+    margin-bottom: 0; }
+  #browserWarning p {
+    color: black;
+    margin-top: 0; }
+
 a {
   text-decoration: none;
   color: white;
@@ -41,6 +50,14 @@ h2 {
 p {
   font-size: 16px; }
 
+.input-form {
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  height: 60px;
+  color: #4d5257; }
+
 .button-blue {
   font-size: 18px;
   font-weight: bold;
@@ -48,6 +65,22 @@ p {
   height: 60px;
   background: #3598db;
   color: white; }
+
+.button-login {
+  border-radius: 5px;
+  background-color: #4d5257;
+  color: white;
+  width: 170px;
+  height: 48px;
+  font-size: 16px;
+  float: right; }
+  .button-login:hover {
+    opacity: 0.8;
+    color: white; }
+
+.modal-backdrop {
+  opacity: 1 !important;
+  background-color: rgba(58, 68, 76, 0.94); }
 
 /*	################################################################
 	2. HEADER
@@ -63,17 +96,6 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  header .button-login {
-    border-radius: 5px;
-    background-color: #4d5257;
-    color: white;
-    width: 170px;
-    height: 48px;
-    font-size: 16px;
-    float: right; }
-    header .button-login:hover {
-      opacity: 0.8;
-      color: white; }
   header h1 {
     font-family: 'gothamLight';
     color: white;
@@ -91,13 +113,7 @@ header {
     display: inline-block;
     width: inherit; }
     header div.input-group input[type=email] {
-      font-size: 18px;
-      font-weight: bold;
-      -webkit-transition: background-color 0.2s;
-      transition: background-color 0.2s;
-      width: 300px;
-      height: 60px;
-      color: #4d5257; }
+      width: 300px; }
 
 /*	################################################################
 	3. WHAT IS PEDALR
@@ -377,7 +393,40 @@ footer {
       color: #3598db; }
 
 /*	################################################################
- 11. MEDIA QUERIES
+ 11. MODAL DIALOG
+################################################################# */
+#modal-login #modal-pedalr {
+  margin: auto;
+  width: 770px; }
+  #modal-login #modal-pedalr .modal-header {
+    background-color: #232629;
+    height: 90px; }
+    #modal-login #modal-pedalr .modal-header img {
+      width: 100px; }
+  #modal-login #modal-pedalr .modal-body {
+    padding: 80px;
+    background-color: #f1f1f1; }
+    #modal-login #modal-pedalr .modal-body form {
+      width: 570px;
+      margin: 0 auto;
+      color: #4d5257; }
+      #modal-login #modal-pedalr .modal-body form input {
+        height: 70px;
+        border: 0; }
+      #modal-login #modal-pedalr .modal-body form #submit-wrapper {
+        height: 48px;
+        margin-top: 25px; }
+        #modal-login #modal-pedalr .modal-body form #submit-wrapper a {
+          color: #4d5257; }
+        #modal-login #modal-pedalr .modal-body form #submit-wrapper #forgot-pass-wrapper {
+          height: inherit;
+          display: inline-block;
+          padding-top: 12px; }
+      #modal-login #modal-pedalr .modal-body form button {
+        display: inline-block; }
+
+/*	################################################################
+ 12. MEDIA QUERIES
 ################################################################# */
 @media (max-width: 767px) {
   .standard-padding {
@@ -391,15 +440,16 @@ footer {
   p {
     font-size: 14px !important; }
 
+  .button-login {
+    width: 115px;
+    height: 45px;
+    font-size: 14px; }
+
   header {
     min-height: initial;
     padding-bottom: 90px; }
     header img {
       width: 100px; }
-    header .button-login {
-      width: 115px;
-      height: 45px;
-      font-size: 14px; }
     header h1 {
       font-size: 35px;
       margin-top: 90px; }
@@ -407,9 +457,10 @@ footer {
       font-size: 11px;
       margin-top: 60px; }
     header input {
-      width: 200px !important;
       height: 45px !important;
       font-size: 12px !important; }
+    header input#input-email-header {
+      width: 200px; }
     header .button-blue {
       font-size: 12px;
       width: 85px;
@@ -482,7 +533,25 @@ footer {
   footer {
     height: 80px; }
     footer li {
-      font-size: 8px; } }
+      font-size: 8px; }
+
+  #modal-login #modal-pedalr {
+    width: 300px;
+    margin: 120px auto; }
+    #modal-login #modal-pedalr .modal-header img {
+      width: 65px; }
+    #modal-login #modal-pedalr .modal-body {
+      padding: 20px; }
+      #modal-login #modal-pedalr .modal-body form {
+        width: 100%; }
+        #modal-login #modal-pedalr .modal-body form input {
+          width: 100%;
+          font-size: 12px;
+          height: 45px; }
+        #modal-login #modal-pedalr .modal-body form a {
+          font-size: 12px; }
+        #modal-login #modal-pedalr .modal-body form button {
+          width: 90px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .standard-padding {
     padding-top: 60px;
@@ -527,7 +596,15 @@ footer {
 
   section#pre-footer {
     min-height: 400px;
-    padding-top: 160px; } }
+    padding-top: 160px; }
+
+  #modal-login #modal-pedalr {
+    width: 575px;
+    margin: 140px auto; }
+    #modal-login #modal-pedalr .modal-body {
+      padding: 50px; }
+      #modal-login #modal-pedalr .modal-body form {
+        width: 100%; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   .standard-padding {
     padding-top: 100px;
@@ -564,10 +641,21 @@ footer {
       height: 150px; }
   section#elsewhere #social-container #blog {
     width: 270px;
-    height: 300px; } }
+    height: 300px; }
+
+  #modal-login #modal-pedalr {
+    width: 575px;
+    margin: 140px auto; }
+    #modal-login #modal-pedalr .modal-body {
+      padding: 50px; }
+      #modal-login #modal-pedalr .modal-body form {
+        width: 100%; } }
 @media (min-width: 1200px) {
   .standard-padding {
     padding-top: 100px;
-    padding-bottom: 120px; } }
+    padding-bottom: 210px; }
+
+  #modal-login #modal-pedalr {
+    margin: 140px auto; } }
 
 /*# sourceMappingURL=style.css.map */

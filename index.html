@@ -24,17 +24,6 @@
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 10]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <![endif]-->
-    <style type="text/css">
-			/* this would probably be in a CSS file */
-			#browserWarning {
-				display:none;
-				background-color: white;
-			}
-			#browserWarning h2{ margin-bottom: 0; }
-			#browserWarning p{ color: black; margin-top: 0; }
-		</style>
-		<!--[if lt IE 10]>
 			<style type="text/css">
 				#browserWarning { display:block; }
 			</style>
@@ -48,7 +37,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<img src="assets/img/pedalr-logo.png" alt="logo">
-		        <button class="btn button-login" type="button">LOGIN</button>
+		        <button type="button" class="btn button-login" data-toggle="modal" data-target="#modal-login">LOGIN</button>
 		        <div id="browserWarning">
 							<h2>Please update your browser to use Pedalr</h2><br>
 							<p>We built pedalr using the latest technology. Unfortunately, Internet explorer is not supported in version 9 or lower.<br>Change to a modern navigator like google chrome.</p><br>
@@ -56,7 +45,7 @@
 						<h1>A better<br>marketplace<br>for people who<br>love bikes</h1>
 						<p>Sign up for updates and a preview of what's coming.</p>
 						<div class="input-group">
-				      <input type="email" class="form-control" placeholder="Email">
+				      <input id="input-email-header" type="email" class="form-control input-form" placeholder="Email">
 				      <span class="input-group-btn">
 				        <button class="btn button-blue" type="button">SIGN UP</button>
 				      </span>
@@ -311,7 +300,36 @@
 			</div>
 		</footer>
 		
-		
+
+		<!-- ********** LOGIN MODAL ********** -->
+		<div id="modal-login" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		  <div id="modal-pedalr" class="modal-dialog">
+		    <div class="modal-content">
+					<div class="modal-header text-center">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <img src="assets/img/pedalr-logo.png" alt="logo">
+		      </div>
+		      <div class="modal-body">
+		        <form>
+		          <div class="form-group">
+		            <input type="email" class="form-control input-form" placeholder="Email address">
+		          </div>
+		          <div class="form-group">
+		            <input type="password" class="form-control input-form" placeholder="Password">
+		          </div>
+		          <div id="submit-wrapper">
+		          	<div id="forgot-pass-wrapper">
+			          	<a href="#">Forgot your password</a>
+		          	</div>
+	  		        <button type="button" class="btn button-login">Login</button>
+		          </div>
+		        </form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
 	  <!-- Bootstrap core JavaScript
 	  ================================================== -->
 	  <!-- Placed at the end of the document so the pages load faster -->
@@ -319,34 +337,8 @@
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	  <script src="assets/js/retina-1.1.0.js"></script>
 
-	  <script type="text/javascript">	
-			// media query event handler. It's used to rearrange items in why pedalr section 
-			if (matchMedia) {
-				var swapped = false;
-				var mq = window.matchMedia("(min-width: 768px) and (max-width: 991px)");
-				mq.addListener(WidthChange);
-				WidthChange(mq);
-			}
-			// media query change
-			function WidthChange(mq) {
-				if (mq.matches) {
-					console.log("entra");
-					swapped = true;
-					var textBlock = $('.text-block-second');
-					var imageBlock = $('.image-block-second');
-					$(imageBlock).before(textBlock.clone());
-					$(textBlock).replaceWith(imageBlock);			
-					$('.image-block-second').css({"min-height":"310px", "top":"0"});
-				}
-				else if(swapped){
-					console.log("sale");
-					swapped = false;
-					var textBlock = $('.text-block-second');
-					var imageBlock = $('.image-block-second');
-					$(imageBlock).before(textBlock.clone());
-					$(textBlock).replaceWith(imageBlock);			
-				}
-			}
+	  <script type="text/javascript">
+
 	  </script>
   </body>
 </html>
