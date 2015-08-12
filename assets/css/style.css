@@ -88,7 +88,8 @@ header {
     margin-top: 75px;
     margin-bottom: 20px; }
   header div.input-group {
-    display: inline-block; }
+    display: inline-block;
+    width: inherit; }
     header div.input-group input[type=email] {
       font-size: 18px;
       font-weight: bold;
@@ -297,7 +298,6 @@ section#what-do-people-have {
 ################################################################# */
 section#elsewhere #social-container {
   font-size: 0;
-  height: 385px;
   color: white; }
   section#elsewhere #social-container .social-block {
     transition: 0.5s ease;
@@ -320,8 +320,8 @@ section#elsewhere #social-container {
   section#elsewhere #social-container #instagram {
     position: relative;
     width: 388px;
+    height: 385px;
     display: inline-block;
-    height: inherit;
     background-color: #517fa4; }
   section#elsewhere #social-container #middle-container {
     width: 498px;
@@ -338,7 +338,7 @@ section#elsewhere #social-container {
   section#elsewhere #social-container #blog {
     position: relative;
     width: 284px;
-    height: inherit;
+    height: 385px;
     display: inline-block;
     background-color: #4d5257; }
     section#elsewhere #social-container #blog span {
@@ -379,7 +379,7 @@ footer {
 /*	################################################################
  11. MEDIA QUERIES
 ################################################################# */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .standard-padding {
     padding-top: 60px;
     padding-bottom: 60px; }
@@ -483,23 +483,88 @@ footer {
     height: 80px; }
     footer li {
       font-size: 8px; } }
-@media (min-width: 769px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .standard-padding {
     padding-top: 60px;
     padding-bottom: 60px; }
 
-  section#elsewhere #social-container {
-    height: initial; }
-    section#elsewhere #social-container #instagram {
-      width: 100%; }
-    section#elsewhere #social-container #middle-container {
-      width: 100%; }
-    section#elsewhere #social-container #blog {
-      width: 100%; } }
+  section#what-you-will-find .element-title {
+    font-size: 17px; }
+  section#what-you-will-find .img-container {
+    min-height: 230px; }
+
+  section#why-pedalr .text-block {
+    height: 310px;
+    width: 100%;
+    padding: 40px; }
+  section#why-pedalr .image-block-container {
+    min-height: 310px; }
+    section#why-pedalr .image-block-container .image-block {
+      min-height: inherit; }
+    section#why-pedalr .image-block-container .image-block-second, section#why-pedalr .image-block-container .image-block-third {
+      top: 0; }
+
+  section#elsewhere #social-container .social-block {
+    padding-top: 30px; }
+  section#elsewhere #social-container #instagram {
+    width: 248px;
+    height: 300px; }
+  section#elsewhere #social-container #middle-container {
+    width: 318px; }
+    section#elsewhere #social-container #middle-container #twitter {
+      height: 150px; }
+    section#elsewhere #social-container #middle-container #facebook {
+      height: 150px; }
+  section#elsewhere #social-container #blog {
+    width: 181px;
+    height: 300px; }
+    section#elsewhere #social-container #blog span {
+      margin-left: 30px; }
+  section#elsewhere #social-container .fa-icon {
+    margin-left: 30px; }
+  section#elsewhere #social-container .fa-angle-right {
+    margin-right: 20px; }
+
+  section#pre-footer {
+    min-height: 400px;
+    padding-top: 160px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   .standard-padding {
     padding-top: 100px;
-    padding-bottom: 120px; } }
+    padding-bottom: 120px; }
+
+  section#what-you-will-find .element-title {
+    font-size: 22px; }
+  section#what-you-will-find .img-container {
+    min-height: 300px; }
+
+  section#why-pedalr .text-block {
+    width: auto;
+    padding: 40px;
+    height: 400px; }
+  section#why-pedalr .text-block-quality {
+    height: 360px; }
+  section#why-pedalr .image-block-first {
+    min-height: 400px; }
+  section#why-pedalr .image-block-second {
+    min-height: 400px;
+    top: -40px; }
+  section#why-pedalr .image-block-third {
+    min-height: 400px;
+    top: -40px; }
+
+  section#elsewhere #social-container #instagram {
+    width: 300px;
+    height: 300px; }
+  section#elsewhere #social-container #middle-container {
+    width: 400px; }
+    section#elsewhere #social-container #middle-container #twitter {
+      height: 150px; }
+    section#elsewhere #social-container #middle-container #facebook {
+      height: 150px; }
+  section#elsewhere #social-container #blog {
+    width: 270px;
+    height: 300px; } }
 @media (min-width: 1200px) {
   .standard-padding {
     padding-top: 100px;
