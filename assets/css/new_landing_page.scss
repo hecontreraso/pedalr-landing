@@ -1,0 +1,694 @@
+/*
+ * Author: Esteban Contreras
+ * URL: esteb.co
+ *
+ * Project Name: pedalr
+ * URL: http://pedalr.com
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Neuton:400,700);
+
+$pedalr-blue: rgb( 53, 152, 219 );
+$pedalr-gray: rgb( 35, 38, 41 );
+$pedalr-dark-gray: rgb( 77, 82, 87 );
+$pedalr-background-gray: rgb( 241, 241, 241 );
+$input-height: 60px;
+
+
+/*	################################################################
+	1. GENERAL STRUCTURES
+################################################################# */
+
+/* Import fonts */
+@font-face {
+	font-family: 'gothamBook';
+	src: url(gotham-book.woff);
+}
+@font-face {
+	font-family: 'gothamLight';
+	src: url(gotham-light.woff);
+}
+@font-face {
+	font-family: 'gothamMedium';
+	src: url(gotham-medium.woff);
+}
+
+@mixin background-properties($image-url, $min-height) {
+	background: url($image-url) no-repeat center top;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: $min-height;
+	width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.new_landing_page{
+	* { font-family: 'gothamBook', sans-serif; }
+	#browserWarning {
+		display:none;
+		background-color: white;
+		h2{ margin-bottom: 0; }
+		p{ color: black; margin-top: 0; }
+	}
+	a { 
+		text-decoration: none;
+		color: white;
+		transition: 0.5s ease;
+		&:hover{
+			text-decoration: none;
+			color: black;
+		}
+	}
+	h2{
+	  color: $pedalr-gray;
+	  font-size: 36px;
+	  font-family: gothamMedium;
+	  margin-bottom: 50px;
+	}
+	p{ font-size: 16px; }
+	.input-form{
+		font-size: 18px;
+		font-weight: bold;
+	  -webkit-transition: background-color 0.2s;
+	  transition: background-color 0.2s;
+	  height: $input-height;
+	  color: $pedalr-dark-gray;
+	}
+	.button-blue{
+		font-size: 18px;
+		font-weight: bold;
+		width: 170px;
+		height: $input-height;
+		background: $pedalr-blue;
+		color: white;
+	}
+	.button-login{
+	  border-radius: 5px;
+	  background-color: $pedalr-dark-gray;
+	  color: white;
+	  width: 170px;
+	  height: 48px;
+	  font-size: 16px;
+	  float: right;
+	  &:hover{
+	  	opacity: 0.8;
+	  	color: white;
+	  }
+	}
+	.modal-backdrop{
+		opacity: 1 !important;
+	  background-color: rgba(58,68,76,0.94);
+	} 
+
+	/*	################################################################
+		2. HEADER
+	################################################################# */
+
+	header {
+		padding-top: 30px;
+		@include background-properties("../img/background-header.jpg", 820px);
+		h1 {
+		  font-family: 'gothamLight';
+			color: white;
+			font-size: 60px;
+			line-height: 1.2;
+			margin-top: 110px;
+			margin-bottom: 40px;
+		}
+		p{
+			color: white;
+			font-size: 16px;
+		  opacity: 0.8;
+			margin-top: 75px;
+	    margin-bottom: 20px;
+		}
+		div.input-group{
+			display: inline-block;
+			width: inherit;
+			input[type=email]{ width: 300px; }
+		}
+	}
+
+
+	/*	################################################################
+		3. WHAT IS PEDALR
+	################################################################# */
+
+	section#what-is-pedalr{
+		@include background-properties("../img/background-what-is-pedalr.jpg", 480px);	
+		p{
+	  	color: $pedalr-gray;
+		  line-height: 1.875;
+	 		font-size: 16px;
+		}
+	}
+
+	/*	################################################################
+		4. WHAT YOU WILLL FIND IN PEDALR
+	################################################################# */
+
+	section#what-you-will-find {
+		.element-title{
+		  font-size: 24px;
+		  font-family: Neuton;
+		  color: $pedalr-blue;
+	    font-weight: bold;
+	  	line-height: 1.5;
+		}
+		.img-container{
+	    position: relative;
+	    margin-top: 20px;
+		}
+		.img-container-first{	@include background-properties("../img/item-first.jpg", 370px); }
+		.img-container-second{ @include background-properties("../img/item-second.jpg", 370px); }
+		.img-container-third{	@include background-properties("../img/item-third.jpg", 370px); }
+		.category-tag{
+			width: 100%;
+			height: 50px;
+		  background-color: rgba( 77, 82, 87, 0.502 );
+	    position: absolute;
+	    bottom: 0;
+			span{
+		  	color: white;
+		  	position: absolute;
+		  	margin-top: 15px;
+		  	margin-left: 30px;
+	  	}
+		}
+		#span-signup-up{
+	    display: inline-block;
+	    margin-top: 50px;
+	    margin-bottom: 20px;
+		  font-size: 18px;
+	    color: $pedalr-gray;
+		}
+	}
+
+	/*	################################################################
+		5. WHAT YOU WILL FIND IN PEDALR
+	################################################################# */
+
+	section#why-pedalr{
+		background-color: $pedalr-background-gray;
+		.col-md-4{ padding: 0; }
+		.text-block{
+			width: 390px;
+			height: 440px;
+			padding: 50px;
+			background-color: white;
+			span{
+			  font-size: 36px;
+		    color: $pedalr-gray;
+			}
+			p{
+			  font-size: 16px;
+				color: $pedalr-gray;
+				line-height: 1.875;
+			}
+		}
+		.text-block-quality{ height: 385px;}
+		.image-block{
+			position: absolute;
+	    z-index: 1;
+		}
+		.image-block-first{
+			@include background-properties("../img/why-pedalr-quality.jpg", 440px);
+		}
+		.image-block-second{ 
+			@include background-properties("../img/why-pedalr-focus.jpg", 440px);
+			top: -55px; 
+		}
+		.image-block-third{
+		  top: -55px;
+			@include background-properties("../img/why-pedalr-trust.jpg", 440px);
+		}
+	}
+
+	/*	################################################################
+		6. BEST URBAN CYCLING YEAR
+	################################################################# */
+
+	section#best-urban-cycling{
+		padding-top: 195px;
+		padding-bottom: 195px;
+		@include background-properties("../img/background-best-urban.jpg", 480px);	
+	  .span-container{
+			width: 370px;
+			height: 90px;
+		  border: 2px white solid;
+		  border-radius: 2px;
+		  margin: auto;
+	    padding: 23px;
+			span{
+		  	color: white;
+			  font-family: Neuton;
+		 		font-size: 24px;
+			}
+		}
+	}
+
+
+	/*	################################################################
+		7. WHAT DO PEOPLE HAVE TO SAY
+	################################################################# */
+
+	section#what-do-people-have{
+		background-color: $pedalr-background-gray;
+		.testimonials {
+			margin-top: 20px;
+			.carousel-indicators{ 
+	   	  margin: 80px auto 0;
+		    bottom: 0;
+		    position: relative;
+		    left: 0;
+				li{
+					background-color: rgb( 214, 222, 228 );
+					border: 0;
+				}
+				.active{
+					background-color: $pedalr-blue;
+				}
+			}
+			img {
+				width: 170px;
+				margin-left: auto;
+	    	margin-right: auto;
+	    }
+			p {
+				margin-top: 40px;
+				font-size: 16px;
+				color: $pedalr-gray;
+			  line-height: 1.875;
+			}
+			span{
+			  font-size: 14px;
+				color: $pedalr-gray;
+			  line-height: 5.143;
+			  font-weight: bold;
+			}
+		}
+	}
+
+
+	/*	################################################################
+		8. ELSEWHERE
+	################################################################# */
+
+	section#elsewhere {
+		#social-container{
+	    font-size: 0;
+			color: white;
+			.social-block{
+				transition: 0.5s ease;
+				padding-top: 50px;
+				&:hover{ opacity: 0.8; }
+				.social-name{
+					position: absolute;
+		    	width: 100%;
+					font-size: 36px;
+					span{
+						font-size: 24px;
+				    vertical-align: top;
+					}
+				}
+			}
+			.fa-icon{
+				margin-left: 50px;
+		    vertical-align: top;
+			}
+			.fa-angle-right{
+		    float: right;
+		    margin-right: 50px;
+			}
+			#instagram{
+				position: relative;
+				width: 388px;
+				height: 385px;
+				display: inline-block;
+				background-color: rgb( 81, 127, 164 );
+			}
+			#middle-container{
+				width: 498px;
+				display: inline-block;
+				height: inherit;
+				#twitter{
+					position: relative;
+					height: 240px;
+					background-color: rgb( 0, 172, 237 );
+				}
+				#facebook{
+					position: relative;
+					height: 145px;
+					background-color: rgb( 59, 89, 152 );
+				}
+			}
+			#blog{
+				position: relative;
+				width: 284px;
+				height: 385px;
+		    display: inline-block;
+				background-color: $pedalr-dark-gray;
+				span{ margin-left: 50px; }
+			}
+		}
+	}
+
+
+	/*	################################################################
+	 9. PRE-FOOTER
+	################################################################# */
+
+	section#pre-footer{
+		padding-top: 200px;
+		@include background-properties("../img/background-pre-footer.jpg", 480px);
+	}
+
+	/*	################################################################
+	 10. FOOTER
+	################################################################# */
+
+	footer{
+		background-color: rgb( 27, 29, 31 );
+		height: 100px;
+	  padding-top: 25px;
+		li{
+			color: white;
+	    display: inline;
+	    font-size: 16px;
+		  line-height: 3;
+		  opacity: 0.702;
+		  margin-right: 27px;
+			a:hover{ color: $pedalr-blue; }
+		}
+	}
+
+	/*	################################################################
+	 11. MODAL DIALOG
+	################################################################# */
+
+	#modal-login{
+		#modal-pedalr{
+	    margin: auto;
+			width: 770px;
+			.modal-header{
+				background-color: rgb( 35, 38, 41 );
+				height: 90px;
+				img{ width: 100px; }
+			}
+			.modal-body{
+				padding: 80px;
+				background-color: $pedalr-background-gray;
+				form{
+					width: 570px;
+					margin: 0 auto;
+					color: $pedalr-dark-gray;
+					input{
+						height: 70px;
+						border: 0;
+					}
+					#submit-wrapper{
+						height: 48px;
+				    margin-top: 25px;
+				    a{ color: $pedalr-dark-gray; }
+						#forgot-pass-wrapper{
+					    height: inherit;
+					    display: inline-block;
+					    padding-top: 12px;
+						}
+					}
+					button{ display: inline-block; }
+				}
+			}
+		}
+	}
+}
+
+/*	################################################################
+ 12. MEDIA QUERIES
+################################################################# */
+
+// SMARTPHONE
+@media (max-width: 767px) {
+	.new_landing_page{
+		.standard-padding{
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+		h2{
+			font-size: 19px;
+	    margin-bottom: 30px;
+		}
+		p{ font-size: 14px !important; }
+		.button-login{
+	    width: 115px;
+	    height: 45px;
+	    font-size: 14px;
+		}
+		header{
+			min-height: initial;
+	    padding-bottom: 90px;
+			img{ width: 100px; }
+			h1{
+				font-size: 35px;
+		    margin-top: 90px;
+			}
+			p{
+				font-size: 11px;
+				margin-top: 60px;
+			}
+			input{
+				height: 45px !important;
+		    font-size: 12px !important;
+			}
+			input#input-email-header{ width: 200px; }
+			.button-blue{
+		    font-size: 12px;
+		    width: 85px;
+		    height: 45px;
+			}
+		}
+		section#what-is-pedalr{ min-height: auto; }
+		section#what-you-will-find{	
+			.element-title{ font-size: 18px; }
+			.img-container{
+				margin-bottom: 30px;
+		    min-height: 250px;
+			}
+			#span-signup-up{
+				font-size: 16px;
+				margin-top: 0;
+			}
+			.button-blue{
+		    width: 115px;
+	    	height: 45px;
+	    	font-size: 14px;
+			}
+		}
+		section#why-pedalr{
+			.text-block{
+				height: auto;
+				width: 100%;
+		    padding: 30px;
+			}
+			.image-block-container{
+				min-height: 200px;
+				.image-block{ min-height: inherit; }
+				.image-block-second, .image-block-third{ top: 0; }
+			}
+		}
+		section#what-do-people-have{
+			.testimonials img{ width: 130px; }
+			.carousel-indicators{ margin: 0 auto 0 !important; }
+		}
+		section#best-urban-cycling{
+			padding-top: 100px;
+			padding-bottom: 100px;
+			min-height: 0;
+			.span-container{
+				width: 259px;
+				height: 63px;
+		    padding: 13px;
+		    span{ font-size: 20px}
+			}
+		}
+		section#elsewhere {
+			padding-bottom: 0;
+			h2{ margin-left: 15px; }
+			#social-container{
+				height: initial;
+				.social-block{
+					width: 100% !important;
+					height: 100px !important;
+					padding-top: 34px;
+					.social-name{
+						font-size: 26px;
+						span{ font-size: 18px; }
+					}
+				}
+				#middle-container{ width: 100% !important; }
+			}
+		}
+		section#pre-footer{
+	    min-height: 250px;
+	    padding-top: 90px;
+		}
+		footer{
+	    height: 80px;
+			li{ font-size: 8px; }
+		}
+		#modal-login{
+			#modal-pedalr{
+				width: 300px;
+		    margin: 120px auto;
+				.modal-header{
+					img{ width: 65px; }
+				}
+				.modal-body{
+					padding: 20px;
+					form{
+						width: 100%;
+						input{
+							width: 100%;
+					    font-size: 12px;
+							height: 45px;
+						}
+						a{ font-size: 12px; }
+						button{ width: 90px; }
+					}
+				}
+			}
+		}
+	}
+}
+// IPAD
+@media (min-width: 768px) and (max-width: 991px) {
+	.new_landing_page{
+		.standard-padding{
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+		section#what-you-will-find{	
+			.element-title{ font-size: 17px; }
+			.img-container{ min-height: 230px; }
+		}
+		section#why-pedalr{
+			.text-block{
+				height: 310px;
+				width: 100%;
+				padding: 40px;
+			}
+			.image-block-container{
+				min-height: 310px;
+				.image-block{ min-height: inherit; }
+				.image-block-second, .image-block-third{ top: 0; }
+			}
+		}
+		section#elsewhere {
+			#social-container{
+				.social-block {padding-top: 30px; }
+				#instagram{ 
+					width: 248px;
+					height: 300px;
+				}
+				#middle-container{ 
+					width: 318px; 
+					#twitter{ height: 150px; }
+					#facebook{ height: 150px; }
+				}
+				#blog{
+					width: 181px;
+					height: 300px;
+					span{ margin-left: 30px; }
+				}	
+				.fa-icon{ margin-left: 30px; }
+				.fa-angle-right{ margin-right: 20px; }
+			}
+		}
+		section#pre-footer{
+	    min-height: 400px;
+	    padding-top: 160px;
+		}
+		#modal-login{
+			#modal-pedalr{
+				width: 575px;
+		    margin: 140px auto;
+				.modal-body{
+					padding: 50px;
+					form{ width: 100%; }
+				}
+			}
+		}
+	}
+}
+
+//HORIZONTAL IPAD AND OLD DESKTOPS
+@media (min-width: 992px) and (max-width: 1199px) {
+	.new_landing_page{	
+		.standard-padding{
+			padding-top: 100px;
+			padding-bottom: 120px;
+		}
+		section#what-you-will-find{
+			.element-title { font-size: 22px; }
+			.img-container{ min-height: 300px; }
+		}
+		section#why-pedalr{
+			.text-block{
+				width: auto;
+				padding: 40px;
+		    height: 400px;
+			}
+			.text-block-quality{ height: 360px; }
+			.image-block-first{ min-height: 400px; }
+			.image-block-second{
+				min-height: 400px;
+				top: -40px;
+			}
+			.image-block-third{
+				min-height: 400px;
+				top: -40px;
+			}
+		}
+		section#elsewhere {
+			#social-container{
+				#instagram{ 
+					width: 300px;
+					height: 300px;
+				}
+				#middle-container{ 
+					width: 400px; 
+					#twitter{ height: 150px; }
+					#facebook{ height: 150px; }
+				}
+				#blog{
+					width: 270px;
+					height: 300px;
+				}	
+			}
+		}
+		#modal-login{
+			#modal-pedalr{
+				width: 575px;
+		    margin: 140px auto;
+				.modal-body{
+					padding: 50px;
+					form{ width: 100%; }
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.new_landing_page{	
+		.standard-padding{
+			padding-top: 100px;
+			padding-bottom: 210px;
+		}
+		#modal-login{
+			#modal-pedalr{ margin: 140px auto; }
+		}
+	}
+}
